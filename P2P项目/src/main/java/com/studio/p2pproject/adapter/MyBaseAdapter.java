@@ -40,6 +40,7 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter {
             return 0;
         }
         return 4;
+
     }
 
     @Override
