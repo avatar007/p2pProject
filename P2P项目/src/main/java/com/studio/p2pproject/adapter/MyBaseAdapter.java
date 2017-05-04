@@ -33,24 +33,17 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter {
     }
 
     @Override
-    public int getViewTypeCount() {
-        return super.getViewTypeCount();
-    }
-
-    @Override
-    public int getItemViewType(int position) {
-        return super.getItemViewType(position);
-    }
-
-    @Override
     public View getView(int position, View convertView, ViewGroup viewGroup) {
         MyViewHolder holder = null;
         if (convertView == null){
             holder = getHolder();
-            holder.getData();
+        }else {
+            holder = (MyViewHolder) convertView.getTag();
         }
-        return null;
+
+        return holder.getView();
     }
 
+    //有子类去重写holder
     public abstract MyViewHolder getHolder();
 }
