@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">P2PProject</string>
+    <string-array name="tab_title">
+        <item>首页</item>
+        <item>我要投资</item>
+        <item>我的资产</item>
+        <item>更多</item>
+    </string-array>
+</resources>

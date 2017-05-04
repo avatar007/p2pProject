@@ -47,6 +47,7 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter {
         MyViewHolder holder = null;
         if (convertView == null){
             holder = getHolder();
+            holder.getData();
         }
         return null;
     }
