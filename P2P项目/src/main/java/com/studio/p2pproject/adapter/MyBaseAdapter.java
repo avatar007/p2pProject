@@ -39,7 +39,7 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter {
         if (position == 0) {
             return 0;
         }
-        return 5;
+        return 6;
     }
 
     @Override
