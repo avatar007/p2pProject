@@ -36,12 +36,16 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter {
 
     @Override
     public int getItemViewType(int position) {
-        return super.getItemViewType(position);
+        if (position == 0) {
+            return 0;
+        }
+        return 1;
     }
 
     @Override
+    //加载两种不同的类型
     public int getViewTypeCount() {
-        return super.getViewTypeCount();
+        return 2;
     }
 
     @Override
