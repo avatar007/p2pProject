@@ -45,7 +45,7 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter {
     @Override
     //加载san种不同的类型
     public int getViewTypeCount() {
-        return 4;
+        return 3;
     }
 
     @Override
