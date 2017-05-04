@@ -27,9 +27,21 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter {
         return data.get(position);
     }
 
+
+    //也可用重写这两个方法去实现加载更多的逻辑
     @Override
     public long getItemId(int position) {
         return position;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return super.getItemViewType(position);
+    }
+
+    @Override
+    public int getViewTypeCount() {
+        return super.getViewTypeCount();
     }
 
     @Override
