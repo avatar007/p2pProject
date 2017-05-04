@@ -24,6 +24,9 @@ public abstract class MyViewHolder<T> {
     public T getData() {
         return data;
     }
+    public View getView() {
+        return mRootView;
+    }
 
     public abstract View initView();//初始化布局
     protected abstract void refreshView(T data);//根据数据刷新界面

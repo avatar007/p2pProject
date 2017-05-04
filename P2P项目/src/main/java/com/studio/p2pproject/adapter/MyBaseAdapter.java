@@ -27,19 +27,25 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter {
         return data.get(position);
     }
 
+
+    //也可用重写这两个方法去实现加载更多的逻辑
     @Override
     public long getItemId(int position) {
         return position;
     }
 
     @Override
-    public int getViewTypeCount() {
-        return super.getViewTypeCount();
+    public int getItemViewType(int position) {
+        if (position == 0) {
+            return 0;
+        }
+        return 6;
     }
 
     @Override
-    public int getItemViewType(int position) {
-        return super.getItemViewType(position);
+    //加载san种不同的类型
+    public int getViewTypeCount() {
+        return 4;
     }
 
     @Override
@@ -47,10 +53,13 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter {
         MyViewHolder holder = null;
         if (convertView == null){
             holder = getHolder();
-            holder.getData();
+        }else {
+            holder = (MyViewHolder) convertView.getTag();
         }
-        return null;
+
+        return holder.getView();
     }
 
+    //有子类去重写holder
     public abstract MyViewHolder getHolder();
 }
